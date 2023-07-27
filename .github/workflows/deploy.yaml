@@ -10,11 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-      - run: docker build -t raghava/food-order-app-test -f ./Dockerfile.dev ./
-      - run: docker run -e CI=true raghava/food-order-app-test
+      - run: docker build -t raghava1/food-order-app-test -f ./Dockerfile.dev ./
+      - run: docker run -e CI=true raghava1/food-order-app-test
 
-      - run: docker build -t raghava/food-order-app-prod ./
-      - run: docker push raghava/food-order-app-prod
+      - run: docker build -t raghava1/food-order-app-prod ./
+      - run: docker push raghava1/food-order-app-prod
 
       # - name: Generate deployment package
       #   run: zip -r deploy.zip . -x '*.git*'
