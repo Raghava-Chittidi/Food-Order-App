@@ -1,0 +1,25 @@
+version: "3"
+services:
+  next-app:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      - /app/.next
+    restart: always
+    ports:
+      - 3000:3000
+    # networks:
+    #   - my_network
+  stripe:
+    image: stripe/stripe-cli
+    restart: always
+    network_mode: host
+    command: "listen --api-key ${STRIPE_API_KEY} --device-name ${STRIPE_DEVICE_NAME} --events checkout.session.completed --forward-to localhost:3000/api/webhook"
+    env_file:
+      - stripe-cli.env
+# networks:
+#   my_network:
+#     external: true

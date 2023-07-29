@@ -15,5 +15,6 @@ COPY __tests__ ./__tests__
 COPY next.config.js .
 COPY jsconfig.json .
 COPY jest.config.mjs .
+EXPOSE 80
 
 CMD ["npm", "start"]
