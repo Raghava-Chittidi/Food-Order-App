@@ -20,7 +20,7 @@ jobs:
         run: zip -r deploy.zip . -x '*.git*'
 
       - name: Deploy to EB
-        uses: Raghava-Chittidi/Food-Order-App@latest
+        uses: Raghava-Chittidi/Food-Order-App@a31f2870c73abae98fb65b42864379d01e4cad95
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
