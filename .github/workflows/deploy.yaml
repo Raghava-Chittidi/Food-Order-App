@@ -25,7 +25,7 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
           application_name: RaghavaDockerEBS
-          environment_name: RaghavaDockerEBS-env-1
+          environment_name: RaghavaDockerEBS-env
           existing_bucket_name: elasticbeanstalk-ap-southeast-1-986306805738
           region: ap-southeast-1
           version_label: ${{ github.sha }}
