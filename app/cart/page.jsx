@@ -1,7 +1,7 @@
 import Cart from "@/components/Cart/Cart";
 import { getMenu } from "@/util/serverFunctions";
 
-const CartPage = async () => {
+const page = async () => {
   const menu = await getMenu();
   return (
     <>
@@ -11,4 +11,4 @@ const CartPage = async () => {
   );
 };
 
-export default CartPage;
+export default page;

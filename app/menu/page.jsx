@@ -1,7 +1,7 @@
 import Menu from "@/components/Menu/Menu";
 import { getMenu } from "@/util/serverFunctions";
 
-const MenuPage = async () => {
+const page = async () => {
   const menu = await getMenu();
   return (
     <>
@@ -11,4 +11,4 @@ const MenuPage = async () => {
   );
 };
 
-export default MenuPage;
+export default page;

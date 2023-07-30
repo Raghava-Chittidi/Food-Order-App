@@ -2,7 +2,7 @@ import BannerLeft from "@/components/Banner/BannerLeft";
 import BannerRight from "@/components/Banner/BannerRight";
 import { getMenu } from "@/util/serverFunctions";
 
-const Home = async () => {
+const page = async () => {
   const menu = await getMenu();
   return (
     <div className="flex flex-col items-center justify-between md:flex-row px-14 overflow-x-hidden">
@@ -12,4 +12,4 @@ const Home = async () => {
   );
 };
 
-export default Home;
+export default page;
